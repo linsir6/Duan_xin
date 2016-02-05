@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.lin_sir.duan_xin.Activity.SendMsgActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/sms_item"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/id_et_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/sms_item"
+            android:gravity="left|top"
+            android:maxHeight="180dp"
+            android:textColor="#777"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/id_btn_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:text="添加联系人 "
+
+
+            />
+
+        <com.example.lin_sir.duan_xin.view.FlowLayout
+            android:id="@+id/id_fl_contacts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </com.example.lin_sir.duan_xin.view.FlowLayout>
+
+    </LinearLayout>
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/id_fab_send"
+        android:src="@drawable/icon_send"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="@dimen/activity_horizontal_margin"
+        android:background="@color/main_color"
+        app:borderWidth="0dp">
+
+
+    </android.support.design.widget.FloatingActionButton>
+
+
+    <FrameLayout
+        android:id="@+id/id_layout_loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:layout_gravity="center"
+        android:background="#33bbbbbb">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="发送中..." />
+
+
+        </LinearLayout>
+
+
+    </FrameLayout>
+</FrameLayout>
