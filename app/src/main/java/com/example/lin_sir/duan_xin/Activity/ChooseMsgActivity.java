@@ -60,6 +60,7 @@ public class ChooseMsgActivity extends AppCompatActivity {
 
                 if (convertView == null) {
                     convertView = mInflater.inflate(R.layout.item_message, parent, false);
+                    Log.i("--->---","test");
                 }
                 TextView content = (TextView) convertView.findViewById(R.id.id_tv_content);
                 Button toSend = (Button) convertView.findViewById(R.id.id_btn_toSend);
